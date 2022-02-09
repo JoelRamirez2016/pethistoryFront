@@ -1,0 +1,39 @@
+<div class="container">
+    <div class="card">
+        <div  class="card-header">
+            <h3 *ngIf="usuario.id">Modificar Usuario</h3>
+            <h3 *ngIf="!usuario.id">Crear Usuario</h3>
+        </div>
+        <div class="card-body">
+            <form action="">
+                <div class="form-group">
+                    <label >Nombre</label>
+                    <input type="text" class="form-control" [(ngModel)]="usuario.nombre" name="nombre"/>
+                </div>
+                <div class="form-group">
+                    <label >apellidos</label>
+                    <input type="text" class="form-control" [(ngModel)]="usuario.apellido" name="apellido"/>
+                </div>
+                <div class="form-group">
+                    <label >tipo_documento</label>
+                    <input type="text" class="form-control" [(ngModel)]="usuario.tipo_documento" name="tipo_documento"/>
+                </div>
+                <div class="form-group">
+                    <label >documento_identificacion</label>
+                    <input type="text" class="form-control" [(ngModel)]="usuario.documento_identificacion" name="documento_identificacion"/>
+                </div>
+                <div class="form-group">
+                    <label >estado</label>
+                    <input type="text" class="form-control" [(ngModel)]="usuario.estado" name="estado"/>
+                </div>
+                <div class="form-group">
+                    <label >sexo</label>
+                    <input type="text" class="form-control" [(ngModel)]="usuario.sexo" name="sexo"/>
+                </div>
+                <button (click)="guardar()" class="btn btn-info">Guardar</button>
+            </form>
+        </div>        
+    </div>
+
+</div>
+  
