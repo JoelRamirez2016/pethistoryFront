@@ -1,0 +1,33 @@
+<div class="container">
+    <div class="card">
+        <div  class="card-header">
+            <h3 *ngIf="mascota.id">Modificar Mascota</h3>
+            <h3 *ngIf="!mascota.id">Crear Mascota</h3>
+        </div>
+        <div class="card-body">
+            <form action="">
+                <div class="form-group">
+                    <label>Usuario</label>
+                    <select [(ngModel)]="mascota.usuario.id"  class="form-control" name="usuario">
+                        <option [value]="usuario.id" *ngFor="let usuario of usuarios">{{usuario.nombre}}</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Nombre</label>
+                    <input type="text" class="form-control" [(ngModel)]="mascota.nombre" name="nombre"/>
+                </div>
+                <div class="form-group">
+                    <label>sexo</label>
+                    <input type="text" class="form-control" [(ngModel)]="mascota.sexo" name="sexo"/>
+                </div>
+                <div class="form-group">
+                    <label>Raza</label>
+                    <input type="text" class="form-control" [(ngModel)]="mascota.raza" name="raza"/>
+                </div>
+                <button (click)="guardar()" class="btn btn-info">Guardar</button>
+            </form>
+        </div>        
+    </div>
+
+</div>
+  

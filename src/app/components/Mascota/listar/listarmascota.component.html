@@ -1,0 +1,32 @@
+<div class="container">
+    <div class="card">
+        <div class="card-header">
+            <h1>Mascotas</h1>
+        </div>
+        <div class="card-body">
+            <a class="btn btn-info" routerLink="/mascotas/add">Nuevo</a>
+            <table class="table table-hover">
+                <thead>
+                    <th>Id</th>
+                    <th>Nombre</th>
+                    <th>Raza</th>
+                    <th>Sexo </th>
+                    <th>Usuario</th>
+                    <th colspan="2">Acciones</th>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let mascota of mascotas" class="text-center">
+                        <td>{{mascota.id}}</td>
+                        <td>{{mascota.nombre}}</td>
+                        <td>{{mascota.raza}}</td>
+                        <td>{{mascota.sexo}}</td>
+                        <td>{{mascota.usuario.nombre}}</td>
+                        <button (click)="editar(mascota)" class="btn btn-warning">Editar</button>
+                        <button (click)="eliminar(mascota)" class="btn btn-danger">Borrar</button>
+                    </tr>
+                </tbody>
+            </table>
+    
+        </div>    
+    </div>    
+</div>

@@ -19,10 +19,12 @@ export class ListarComponent implements OnInit {
       this.usuarios = data;
     });
   }
-
+  Nuevo(){
+    this.router.navigate(["usuarios/add"])
+  }
   editar(usuario:Usuario) {
     localStorage.setItem("id", usuario.id.toString());
-    this.router.navigate(["add"])
+    this.router.navigate(["usuarios/add"])
   }
 
   eliminar(usuario:Usuario) {

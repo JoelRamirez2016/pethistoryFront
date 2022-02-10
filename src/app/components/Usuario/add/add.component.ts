@@ -30,12 +30,12 @@ export class AddComponent implements OnInit {
     if (this.usuario.id) 
       return this.service.updateUsuario(this.usuario).subscribe(data=>{
         alert("Usuario Actualizado exitosamente");
-        this.router.navigate(["listar"]);
+        this.router.navigate(["usuarios/listar"]);
       });  
     
     return this.service.saveUsuario(this.usuario).subscribe(data=>{
       alert("Usuario creado exitosamente");
-      this.router.navigate(["listar"]);
+      this.router.navigate(["usuarios/listar"]);
     });
   }
 
