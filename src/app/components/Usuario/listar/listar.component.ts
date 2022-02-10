@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Usuario } from 'src/app/Models/Usuario';
-import { ServiceService } from '../../Service/service.service'
+import { Usuario } from 'src/app/models/Usuario';
+import { UsuarioService } from '../../../Service/usuario.service'
 
 @Component({
   selector: 'app-listar',
@@ -11,7 +11,7 @@ import { ServiceService } from '../../Service/service.service'
 export class ListarComponent implements OnInit {
 
   usuarios: Usuario[] = [];
-  constructor(private service:ServiceService, private router:Router) { }
+  constructor(private service:UsuarioService, private router:Router) { }
 
   ngOnInit(): void {
     this.service.getUsuarios()

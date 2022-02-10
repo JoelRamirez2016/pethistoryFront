@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, FormControl } from '@angular/forms';
-import { ServiceService } from '../../Service/service.service'
+import { UsuarioService } from '../../../Service/usuario.service'
 import { Router } from '@angular/router';
-import { Usuario } from 'src/app/Models/Usuario';
+import { Usuario } from 'src/app/models/Usuario';
 @Component({
   selector: 'app-add',
   templateUrl: './add.component.html',
@@ -13,7 +13,7 @@ export class AddComponent implements OnInit {
 
   usuario:Usuario = new Usuario;
 
-  constructor(private service:ServiceService, private router:Router) {
+  constructor(private service:UsuarioService, private router:Router) {
   }
 
   editar(){
