@@ -13,7 +13,8 @@ export class SidenavComponent implements OnInit {
   fillerNav = [
     {name:"Home", route:"", icon:"home"},
     {name:"Usuarios", route:"usuarios/listar", icon:"perm_contact_calendar"}, 
-    {name:"Mascotas", route:"mascotas/listar", icon:"pets"}  
+    {name:"Mascotas", route:"mascotas/listar", icon:"pets"},
+    {name:"Historias Clinicas", route:"hcs/listar", icon:"source"}  
   ];
 
   private _mobileQueryListener: () => void;

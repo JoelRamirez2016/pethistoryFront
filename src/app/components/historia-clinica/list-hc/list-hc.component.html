@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="card">
+        <div class="card-header">
+            <h1>Historias Clinicas</h1>
+        </div>
+        <div class="card-body">
+            <a class="btn btn-info" routerLink="/hcs/add">Nuevo</a>
+            <table class="table table-hover">
+                <thead class="text-center">
+                    <th>Id</th>
+                    <th>Mascota</th>
+                    <th>Fecha De Creacion</th>
+                    <th colspan="2">Acciones</th>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let hc of hcs" class="text-center">
+                        <td>{{hc.id}}</td>
+                        <td>{{hc.mascota.nombre}}</td>
+                        <td>{{hc.fecha_creacion}}</td>
+                        <td>
+                            <button (click)="{}" class="btn btn-success">Ver Detalles</button>
+                            <button (click)="eliminar(hc)" class="btn btn-danger">Borrar</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>    
+        </div>    
+    </div>    
+</div>

@@ -5,6 +5,8 @@ import { ListarComponent } from './components/Usuario/listar/listar.component';
 import { AddMascotaComponent } from './components/Mascota/add/addmascota.component';
 import { ListarMascotaComponent } from './components/Mascota/listar/listarmascota.component';
 import { HomeComponent } from './components/home/home.component';
+import { AddHcComponent } from './components/historia-clinica/add-hc/add-hc.component';
+import { ListHcComponent } from './components/historia-clinica/list-hc/list-hc.component';
 
 const routes: Routes = [
   {path:'', component:HomeComponent},
@@ -12,6 +14,8 @@ const routes: Routes = [
   {path:'usuarios/add', component:AddComponent},
   {path:'mascotas/listar', component:ListarMascotaComponent},
   {path:'mascotas/add', component:AddMascotaComponent},
+  {path:'hcs/listar', component:ListHcComponent},
+  {path:'hcs/add', component:AddHcComponent},
 ];
 
 @NgModule({

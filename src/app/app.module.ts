@@ -17,6 +17,10 @@ import { MatIconModule } from '@angular/material/icon';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SidenavComponent } from './components/sidenav/sidenav.component';
 import { HomeComponent } from './components/home/home.component';
+import { AddHcComponent } from './components/historia-clinica/add-hc/add-hc.component';
+import { ListHcComponent } from './components/historia-clinica/list-hc/list-hc.component';
+import { AddColaboradorComponent } from './components/colaborador/add-colaborador/add-colaborador.component';
+import { ListColaboradorComponent } from './components/colaborador/list-colaborador/list-colaborador.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +31,10 @@ import { HomeComponent } from './components/home/home.component';
     ListarMascotaComponent,
     SidenavComponent,
     HomeComponent,
+    AddHcComponent,
+    ListHcComponent,
+    AddColaboradorComponent,
+    ListColaboradorComponent,
   ],
   imports: [
     BrowserModule,
