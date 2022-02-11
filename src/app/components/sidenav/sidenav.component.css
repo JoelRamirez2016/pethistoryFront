@@ -33,6 +33,13 @@
   mat-sidenav{
     width: 20%;  
   }
+  
+  mat-nav-list{
+    text-align: center;
+  }
+  mat-nav-list img {
+    width: 85%;
+  }
 
   mat-nav-list mat-icon {
     margin-right: 10px;
