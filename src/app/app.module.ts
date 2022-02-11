@@ -21,6 +21,8 @@ import { AddHcComponent } from './components/historia-clinica/add-hc/add-hc.comp
 import { ListHcComponent } from './components/historia-clinica/list-hc/list-hc.component';
 import { AddColaboradorComponent } from './components/colaborador/add-colaborador/add-colaborador.component';
 import { ListColaboradorComponent } from './components/colaborador/list-colaborador/list-colaborador.component';
+import { ListDetallesHcComponent } from './components/detalles-hc/list-detalles-hc/list-detalles-hc.component';
+import { AddDetallesHcComponent } from './components/detalles-hc/add-detalles-hc/add-detalles-hc.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +37,8 @@ import { ListColaboradorComponent } from './components/colaborador/list-colabora
     ListHcComponent,
     AddColaboradorComponent,
     ListColaboradorComponent,
+    ListDetallesHcComponent,
+    AddDetallesHcComponent,
   ],
   imports: [
     BrowserModule,

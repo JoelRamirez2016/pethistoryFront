@@ -10,7 +10,7 @@ import { HistoriaClinicaService } from 'src/app/Service/historia-clinica.service
 })
 export class ListHcComponent implements OnInit {
 
-  hcs:any[] = [];
+  hcs:HistoriaClinica[] = [];
 
   constructor(private service:HistoriaClinicaService, private router:Router) { }
 
@@ -23,6 +23,12 @@ export class ListHcComponent implements OnInit {
   Nuevo(){
     this.router.navigate(["hcs/add"])
   }
+
+  detalles(hc:HistoriaClinica){
+    localStorage.setItem("current-hc", JSON.stringify(hc));
+    this.router.navigate(["detalles-hc/listar"])
+  }
+
   editar(hc:HistoriaClinica) {
     localStorage.setItem("id", hc.id.toString());
     this.router.navigate(["hcs/add"])

@@ -1,0 +1,96 @@
+<div class="container">
+    <div class="card">
+        <div class="card-header">
+            <h1>Historia Clinica</h1>
+            <h3>Mascota: {{hc ? hc.mascota.nombre : ""}} </h3>
+            <h3>Fecha: {{hc ? hc.fecha_creacion : ""}}</h3>
+        </div>
+    </div>
+    <div class="card">
+        <input type="hidden" name="id" [value]="newdetalle.id">
+        <div class="card-body m-auto">
+            <div class="row">
+                <div class="form-group">
+                    <label>temperatura</label>
+                    <input type="text" class="form-control" [(ngModel)]="newdetalle.temperatura" name="temperatura"/>
+                </div>
+                <div class="form-group">
+                    <label>peso</label>
+                    <input type="text" class="form-control"  [(ngModel)]="newdetalle.peso" name="temperatura" />
+                </div>
+                <div class="form-group">
+                    <label>Frecuencia Cardiaca</label>
+                    <input type="text" class="form-control"  [(ngModel)]="newdetalle.frecuencia_cardiaca" name="temperatura" />
+                </div>
+                <div class="form-group">
+                    <label>frecuencia_respiratoria</label>
+                    <input type="text" class="form-control"  [(ngModel)]="newdetalle.frecuencia_respiratoria" name="temperatura" />
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group">
+                    <label>fecha_hora</label>
+                    <input type="text" class="form-control"  [(ngModel)]="newdetalle.fecha_hora" name="temperatura" />
+                </div>
+                <div class="form-group">
+                    <label>habitad</label>
+                    <input type="text" class="form-control"  [(ngModel)]="newdetalle.habitad" name="temperatura" />
+                </div>
+                <div class="form-group">
+                    <label>observacion</label>
+                    <input type="text" class="form-control"  [(ngModel)]="newdetalle.observacion" name="temperatura" />
+                </div>
+                <div class="form-group">
+                    <label>Colaborador</label>
+                    <select [(ngModel)]="newdetalle.colaborador.id"  class="form-control" name="colaborador">
+                        <option [value]="colaborador.id" *ngFor="let colaborador of colaboradores">{{colaborador.nombre}}</option>
+                    </select>
+                </div>
+            </div>
+            <button (click)="guardar()" class="btn btn-success">Añadir Detalle</button>
+        </div>     
+    </div>
+    <div class="card" *ngFor="let detalle of detalles">
+        <input type="hidden" name="id" [value]="detalle.id">
+        <div class="card-body m-auto">
+            <button (click)="eliminar(detalle)" class="btn btn-danger">Eliminar Detalle</button>
+            <div class="row">
+                <div class="form-group">
+                    <label>temperatura</label>
+                    <input type="text" class="form-control" value="{{detalle.temperatura}}" />
+                </div>
+                <div class="form-group">
+                    <label>peso</label>
+                    <input type="text" class="form-control" value="{{detalle.peso}}" />
+                </div>
+                <div class="form-group">
+                    <label>frecuencia_cardiaca</label>
+                    <input type="text" class="form-control" value="{{detalle.frecuencia_cardiaca}}" />
+                </div>
+                <div class="form-group">
+                    <label>frecuencia_respiratoria</label>
+                    <input type="text" class="form-control" value="{{detalle.frecuencia_respiratoria}}" />
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group">
+                    <label>fecha_hora</label>
+                    <input type="text" class="form-control" value="{{detalle.fecha_hora}}" />
+                </div>
+                <div class="form-group">
+                    <label>habitad</label>
+                    <input type="text" class="form-control" value="{{detalle.habitad}}" />
+                </div>
+                <div class="form-group">
+                    <label>observacion</label>
+                    <input type="text" class="form-control" value="{{detalle.observacion}}" />
+                </div>
+                <div class="form-group">
+                    <label>Colaborador</label>
+                    <input type="text" class="form-control" value="{{detalle.colaborador.nombre}}" />
+                </div>
+            </div>
+        </div>     
+    </div>
+</div>
+  

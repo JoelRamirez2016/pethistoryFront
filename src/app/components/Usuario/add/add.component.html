@@ -7,27 +7,27 @@
         <div class="card-body">
             <form action="">
                 <div class="form-group">
-                    <label >Nombre</label>
+                    <label>Nombre</label>
                     <input type="text" class="form-control" [(ngModel)]="usuario.nombre" name="nombre"/>
                 </div>
                 <div class="form-group">
-                    <label >apellidos</label>
+                    <label>Apellidos</label>
                     <input type="text" class="form-control" [(ngModel)]="usuario.apellido" name="apellido"/>
                 </div>
                 <div class="form-group">
-                    <label >tipo_documento</label>
+                    <label>Tipo Documento</label>
                     <input type="text" class="form-control" [(ngModel)]="usuario.tipo_documento" name="tipo_documento"/>
                 </div>
                 <div class="form-group">
-                    <label >documento_identificacion</label>
+                    <label>Documento Identificacion</label>
                     <input type="text" class="form-control" [(ngModel)]="usuario.documento_identificacion" name="documento_identificacion"/>
                 </div>
                 <div class="form-group">
-                    <label >estado</label>
+                    <label>Estado</label>
                     <input type="text" class="form-control" [(ngModel)]="usuario.estado" name="estado"/>
                 </div>
                 <div class="form-group">
-                    <label >sexo</label>
+                    <label>Sexo</label>
                     <input type="text" class="form-control" [(ngModel)]="usuario.sexo" name="sexo"/>
                 </div>
                 <button (click)="guardar()" class="btn btn-info">Guardar</button>

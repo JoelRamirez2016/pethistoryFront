@@ -1,1 +1,35 @@
-<p>add-colaborador works!</p>
+<div class="container">
+    <div class="card">
+        <div  class="card-header">
+            <h3 *ngIf="colaborador.id">Modificar Colaborador</h3>
+            <h3 *ngIf="!colaborador.id">Crear Colaborador</h3>
+        </div>
+        <div class="card-body">
+            <form action="">
+                <div class="form-group">
+                    <label>Nombre</label>
+                    <input type="text" class="form-control" [(ngModel)]="colaborador.nombre" name="nombre"/>
+                </div>
+                <div class="form-group">
+                    <label>Apellidos</label>
+                    <input type="text" class="form-control" [(ngModel)]="colaborador.apellido" name="apellido"/>
+                </div>
+                <div class="form-group">
+                    <label>Tipo Documento</label>
+                    <input type="text" class="form-control" [(ngModel)]="colaborador.tipo_documento" name="tipo_documento"/>
+                </div>
+                <div class="form-group">
+                    <label>Documento Identificacion</label>
+                    <input type="text" class="form-control" [(ngModel)]="colaborador.documento_identificacion" name="documento_identificacion"/>
+                </div>
+                <div class="form-group">
+                    <label>Cargo</label>
+                    <input type="text" class="form-control" [(ngModel)]="colaborador.cargo" name="cargo"/>
+                </div>
+                <button (click)="guardar()" class="btn btn-info">Guardar</button>
+            </form>
+        </div>        
+    </div>
+
+</div>
+  
