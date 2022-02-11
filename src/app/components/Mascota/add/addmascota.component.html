@@ -17,8 +17,11 @@
                     <input type="text" class="form-control" [(ngModel)]="mascota.nombre" name="nombre"/>
                 </div>
                 <div class="form-group">
-                    <label>sexo</label>
-                    <input type="text" class="form-control" [(ngModel)]="mascota.sexo" name="sexo"/>
+                    <label>Sexo</label>
+                    <select [(ngModel)]="mascota.sexo"  class="form-control" name="sexo">
+                        <option value="Macho" >Macho</option>
+                        <option value="Hembra" >Hembra</option>
+                    </select>
                 </div>
                 <div class="form-group">
                     <label>Raza</label>
